@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Punjab Fastfood - Authentic Punjabi Flavors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)),
+                url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+            min-height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .cuisine-grid .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .cuisine-grid .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 70vh;
+            }
+
+            .display-3 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section (The Hook) -->
+    <section class="hero d-flex align-items-center text-center text-white" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <img src="images/MNPF_Logo.png" alt="Mini Punjab Logo" class="img-fluid mb-4"
+                        style="max-height: 150px;">
+                    <h1 class="display-3 fw-bold mb-4">Authentic Punjabi Flavors in the Heart of Ahmedabad</h1>
+                    <p class="lead fs-4 mb-5">Specializing in Punjabi food with 300+ varieties across Gujarati,
+                        Kathiyawadi, and South Indian cuisines.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="menu.html#menu" class="btn btn-brand btn-lg px-5 py-3 shadow">
+                            <i class="fas fa-utensils me-2"></i>View Digital Menu
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg px-5 py-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-5" style="background: linear-gradient(to right, #FFF8E1, #FFFFFF);">
+        <div class="container text-center">
+            <h2 class="fw-bold section-title">Join our 5,000+ Happy Diners</h2>
+            <p class="lead mb-5">Experience why Mini Punjab is the favorite neighborhood spot in Ahmedabad.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"Best Punjabi food in the area! The Dal Bati is absolutely authentic and
+                            delicious."</p>
+                        <h6 class="fw-bold mb-0">- Rahul Mehta</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"Amazing South Indian variety. The service is fast and staff is very
+                            polite."</p>
+                        <h6 class="fw-bold mb-0">- Sneha Patel</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <a href="https://www.google.com/maps/place/Mini+Punjab+Fastfood/@23.0026571,72.5336566,3207m/data=!3m1!1e3!4m8!3m7!1s0x395e854b09da59c5:0xddc42199e7ba05da!8m2!3d23.0045249!4d72.5337646!9m1!1b1!16s%2Fg%2F11tsq0hdlv"
+                    target="_blank" class="btn btn-brand btn-lg px-5 py-3">
+                    <i class="fab fa-google me-2"></i>Read All Google Reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation (Sticky after hero) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top pt-0" style="top: 0;">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="#">
+                <img src="images/MNPF_Logo.png" alt="Logo" height="40" class="me-2 rounded shadow-sm bg-white p-1">
+                <span>Mini Punjab</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-warning btn-sm text-dark px-3 fw-bold rounded-pill"
+                            href="admin.html">
+                            <i class="fas fa-user-shield me-1"></i>Admin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- "The Big Five" Cuisine Grid -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Explore Our Cuisines</h2>
+            <div class="row g-4 cuisine-grid">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="images/Punjabi Sabji.png" class="card-img-top" alt="Punjabi">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-brand-red">Punjabi</h5>
+                            <p class="card-text">Our Specialty in Authentic Punjabi Cuisine</p>
+                            <p class="card-text">A robust celebration of smoke and Maillard reactions; defined by the
+                                charred depth of tandoor-fired breads and slow-simmered legumes. The palate is anchored
+                                by cultured fats; utilizing white butter and ghee to carry the potent warmth of
+                                dry-roasted masalas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="images/Gujarati Thali.png" class="card-img-top" alt="Gujarati">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-brand-orange">Gujarati & Kathiyawadi</h5>
+                            <p class="card-text">Regional Classics: Veg & Kathiyawadi Thali Available</p>
+                            <p class="card-text">where the natural sweetness of jaggery offsets the sharp acidity of
+                                fermented gram flour. It is a vegetable-forward tradition that relies on tempering
+                                (vaghar); using mustard seeds and asafetida to unlock deep aromatic complexity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="images/South Indian.png" class="card-img-top" alt="South Indian">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-success">South Indian</h5>
+                            <p class="card-text">Dosa, Utthapam & Idli Sambar.</p>
+                            <p class="card-text">It is a cuisine defined by the architectural crunch of a dosa and the
+                                cooling depth of coconut milk. This is a flavor profile built on the bright acidity of
+                                tamarind; balanced by the aromatic precision of freshly ground spices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="images/Bhaji Pav.png" class="card-img-top" alt="Fast Food">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-info">Fast Food</h5>
+                            <p class="card-text">Authentic Bhaji Pav</p>
+                            <p class="card-text">A vibrant vegetable mash infused with high-octane spices and finished
+                                with generous salted butter. This Mumbai staple is defined by the contrast between its
+                                velvety, umami-rich bhaji and griddle-toasted milk bread.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="images/Pulav.png" class="card-img-top" alt="Fast Food">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-info">Tasty n Tasty</h5>
+                            <p class="card-text">Premium taste of Pulav</p>
+                            <p class="card-text">A sophisticated rice assembly where distinct, long-grain basmati is
+                                steam-cooked to absorb the subtle aromatics of whole spices. It is an exercise in
+                                textural precision; often garnished with ghee-fried nuts and caramelized onions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="images/Dal Bati.png" class="card-img-top" alt="Fast Food">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-info">Special Rajsthani</h5>
+                            <p class="card-text">Sp. Marwadi Dal Bati</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us? Section -->
+    <section class="py-5 bg-brand-cream text-center">
+        <div class="container">
+            <h2 class="fw-bold section-title">Why Choose Us?</h2>
+            <div class="row g-4 pt-4">
+                <div class="col-md-4">
+                    <div class="p-4 border-0 shadow-sm bg-white rounded-4 h-100">
+                        <h1 class="display-5 text-brand-red mb-3">🏆</h1>
+                        <h5 class="fw-bold">5,000+ Customers</h5>
+                        <p class="text-muted small">Trusted by families across Ahmedabad for authentic taste.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border-0 shadow-sm bg-white rounded-4 h-100">
+                        <h1 class="display-5 text-brand-orange mb-3">🍛</h1>
+                        <h5 class="fw-bold">300+ Varieties</h5>
+                        <p class="text-muted small">From spicy Punjabi to healthy South Indian options.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="p-4 border-0 shadow-sm bg-white rounded-4 h-100 d-flex flex-column justify-content-center">
+                        <a href="about.html" class="btn btn-brand btn-lg py-3">Learn Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fast-Action Footer & Contact -->
+    <footer id="contact" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2 text-warning"></i>Near Jivrajpark Metro Station, Bhagyoday
+                        Society, Ahmedabad</p>
+                    <a href="tel:+918320201186" class="btn btn-outline-danger btn-lg mb-2 d-block"><i
+                            class="fas fa-phone me-2"></i>+91 83202 01186</a>
+                    <a href="tel:+919016027492" class="btn btn-outline-danger btn-lg mb-2 d-block"><i
+                            class="fas fa-phone me-2"></i>+91 90160 27492</a>
+                </div>
+                <div class="col-lg-4 mb-4 text-center d-flex flex-column justify-content-center">
+                    <h5 class="fw-bold mb-3">Find Us</h5>
+                    <p>Click below to open GPS navigation</p>
+                    <a href="https://maps.app.goo.gl/ZtATSBNpswdj6xvUA" target="_blank"
+                        class="btn btn-brand btn-lg py-3 px-4 shadow">
+                        <i class="fas fa-map-marked-alt me-2"></i>Open in Google Maps
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-4 text-center">
+                    <h5 class="fw-bold mb-3">Quick Order</h5>
+                    <p class="lead">Ready for takeaway?</p>
+                    <a href="https://wa.me/918320201186?text=Hi%2C%20I'd%20like%20to%20order%20from%20Mini%20Punjab!"
+                        class="btn btn-success btn-lg px-4">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp Order
+                    </a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2026 Mini Punjab Fastfood. All rights reserved. | Proudly serving Ahmedabad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918320201186?text=Hi%2C%20I'd%20like%20to%20order!"
+        class="whatsapp-float btn btn-success rounded-circle shadow-lg" style="width: 60px; height: 60px;">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

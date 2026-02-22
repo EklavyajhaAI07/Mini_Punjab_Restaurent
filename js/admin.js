@@ -5,6 +5,12 @@
 let menuItems = [];
 
 async function fetchMenu() {
+    if (!window.supabaseClient) {
+        console.warn('Supabase client not ready yet. Retrying...');
+        setTimeout(fetchMenu, 1000);
+        return;
+    }
+
     const { data, error } = await window.supabaseClient
         .from('menu_items')
         .select('*')
@@ -158,6 +164,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             try {
+                if (!window.supabaseClient) {
+                    throw new Error('Supabase client is not initialized. Please refresh the page.');
+                }
+
                 // 1. Upload Image to Supabase Storage
                 const fileExt = imageFile.name.split('.').pop();
                 const fileName = `${Math.random()}.${fileExt}`;

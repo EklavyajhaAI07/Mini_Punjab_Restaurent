@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 async function fetchMenuItems() {
+    if (!window.supabaseClient) {
+        console.warn('Supabase client not ready. Retrying...');
+        setTimeout(fetchMenuItems, 1000);
+        return;
+    }
     let supabaseItems = [];
     try {
         const { data, error } = await window.supabaseClient

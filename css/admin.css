@@ -1,0 +1,39 @@
+/* Admin Dashboard Specific Styles */
+
+#loginSection,
+#adminPanel {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+#adminPanel {
+    max-width: 900px;
+    display: none;
+}
+
+.stat-card {
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+    }
+}
+
+.min-vh-100 {
+    min-height: calc(100vh - 72px) !important; /* Adjust for navbar height */
+}

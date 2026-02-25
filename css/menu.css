@@ -1,0 +1,103 @@
+/* Menu Page Specific Styles */
+
+.menu-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://i.postimg.cc/V6MkcD7j/Whats_App_Image_2026_02_20_at_8_23_33_PM.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cuisine-nav .card {
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+}
+
+.cuisine-nav .card.active {
+    border-color: var(--brand-orange);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(211, 47, 47, 0.2);
+}
+
+.cuisine-nav img {
+    height: 120px;
+    object-fit: cover;
+}
+
+.menu-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.menu-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-item .card {
+    border-radius: 20px;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-item img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.price-tag {
+    font-family: var(--sans-font);
+    font-weight: 700;
+    color: var(--brand-red);
+    font-size: 1.25rem;
+}
+
+.filter-tags .badge {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sticky-cta {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+}
+
+.btn-order-wa {
+    background-color: #25D366;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 12px 25px;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+.modal-content {
+    border-radius: 25px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .menu-hero {
+        padding: 60px 0;
+    }
+
+    .sticky-cta {
+        width: 95%;
+    }
+}

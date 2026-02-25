@@ -1,0 +1,168 @@
+/* Preloader Styles - Mini Punjab Restaurant */
+:root {
+    --brand-red: #D32F2F;
+    --brand-orange: #FF8C00;
+    --brand-yellow: #FFC107;
+    --brand-cream: #FFFBF0;
+    --brand-dark: #2D2D2D;
+    --brand-white: #FFFFFF;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #2D2D2D 0%, #0a0a0a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s;
+}
+
+/* Texture Overlay */
+.preloader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.preloader-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+#countdown {
+    font-size: clamp(8rem, 20vw, 15rem);
+    font-weight: 900;
+    color: var(--brand-yellow);
+    text-shadow: 0 0 40px rgba(255, 193, 7, 0.6);
+    display: block;
+    line-height: 1;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.welcome-line {
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--brand-white);
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    filter: blur(10px);
+    background: linear-gradient(to right, #fff, var(--brand-yellow), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.boom-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border: 2px solid var(--brand-orange);
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes pulseZoom {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+
+#countdown.animate {
+    animation: pulseZoom 1s ease-in-out forwards;
+}
+
+@keyframes boomRingEffect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        border-width: 50px;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        width: 300vw;
+        height: 300vw;
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+@keyframes welcomeReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.preloader-bg-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes flashEffect {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}

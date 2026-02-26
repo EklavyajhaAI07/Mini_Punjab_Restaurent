@@ -29,7 +29,7 @@ async function checkAuth() {
     const errorMsg = document.getElementById('errorMsg');
 
     // Simple password check for now, can be replaced with Supabase Auth
-    if (passInput.value === "minipunjab2026") {
+    if (passInput.value === "mini@2026") {
         document.getElementById('loginSection').style.display = 'none';
         document.getElementById('adminPanel').style.display = 'block';
         sessionStorage.setItem('is_admin', 'true');
@@ -224,3 +224,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 window.checkAuth = checkAuth;
 window.logout = logout;
 window.removeItem = removeItem;
+

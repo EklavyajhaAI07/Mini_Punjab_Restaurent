@@ -2,7 +2,7 @@
 
 .menu-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('https://i.postimg.cc/V6MkcD7j/Whats_App_Image_2026_02_20_at_8_23_33_PM.jpg');
+        url('/images/Siting Launge.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -100,4 +100,5 @@
     .sticky-cta {
         width: 95%;
     }
+
 }
